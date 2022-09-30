@@ -1,0 +1,153 @@
+body {
+  font-family: "League Spartan", sans-serif;
+  justify-items: center;
+  align-items: center;
+  font-size: 15px;
+  background: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+  background-color: white;
+  margin: 0;
+  background-repeat: no-repeat,no-repeat;
+  background-position: left top, right bottom;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: [firsthalf-start] 1.1fr [bottomhalf-start] 0.9fr [bottomhalf-end];
+  grid-template-columns: [lefthalf-start] 1fr [righthalf-start] 1fr [righthalf-end]; }
+  @media (max-width: 27rem) {
+    body {
+      background-image: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+      grid-template-rows: [slogan-start] fit-content(4rem) [rating-start] fit-content(4rem) [review-start] fit-content(4rem) [review-end];
+      grid-template-columns: 1fr;
+      width: 95%;
+      margin: auto; } }
+
+.slogan {
+  height: fit-content;
+  width: 30rem;
+  grid-column: lefthalf-start/righthalf-start;
+  grid-row: firsthalf-start/bottomhalf-start; }
+  @media (max-width: 27rem) {
+    .slogan {
+      grid-row: slogan-start/rating-start;
+      width: 100%;
+      text-align: center; } }
+  .slogan h1 {
+    color: #502050;
+    font-weight: 700;
+    font-size: 3.5rem; }
+    @media (max-width: 27rem) {
+      .slogan h1 {
+        font-size: 3rem; } }
+  .slogan p {
+    color: #937b92;
+    font-size: 1.2rem; }
+
+.star-ratings {
+  grid-column: righthalf-start/righthalf-end;
+  grid-row: firsthalf-start/bottomhalf-start;
+  justify-self: start;
+  display: flex;
+  flex-direction: column; }
+  @media (max-width: 27rem) {
+    .star-ratings {
+      grid-row: rating-start/review-start;
+      width: 100%;
+      align-items: center; } }
+  .star-ratings div {
+    border-radius: 0.5rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f7f2f7;
+    margin-top: 1.5rem; }
+    @media (max-width: 27rem) {
+      .star-ratings div {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin: 1rem; }
+        .star-ratings div span {
+          margin: 1rem; } }
+    .star-ratings div p {
+      color: #502050;
+      font-weight: 700;
+      margin-left: 1rem;
+      margin-right: 3rem; }
+      @media (max-width: 27rem) {
+        .star-ratings div p {
+          margin: 0.5rem 0;
+          margin-top: 0;
+          width: 100%; } }
+  .star-ratings .report-guru {
+    margin-left: 3rem; }
+    @media (max-width: 27rem) {
+      .star-ratings .report-guru {
+        margin: 1rem; } }
+    .star-ratings .report-guru p {
+      margin-right: 1.3rem; }
+  .star-ratings .best-tech {
+    margin-left: 6rem; }
+    @media (max-width: 27rem) {
+      .star-ratings .best-tech {
+        margin: 1rem; } }
+
+.customer-reviews {
+  margin-left: 5rem;
+  align-self: start;
+  justify-self: start;
+  grid-column: lefthalf-start/righthalf-end;
+  grid-row: bottomhalf-start/bottomhalf-end;
+  display: flex; }
+  @media (max-width: 27rem) {
+    .customer-reviews {
+      grid-row: review-start/review-end;
+      flex-direction: column;
+      margin: 4rem 0;
+      margin-bottom: 8rem;
+      font-size: 1.3rem; } }
+  .customer-reviews .review {
+    color: white;
+    height: fit-content;
+    width: 20rem;
+    padding: 2rem 0;
+    background-color: #502050;
+    margin-left: 2rem;
+    border-radius: 0.5rem; }
+    @media (max-width: 27rem) {
+      .customer-reviews .review {
+        margin: 0;
+        width: 100%; } }
+  .customer-reviews .user {
+    padding: 0 2rem;
+    display: flex;
+    align-items: center; }
+    .customer-reviews .user .profile {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+      background-image: url("images/image-colton.jpg");
+      background-size: contain; }
+    .customer-reviews .user .profile-2 {
+      background-image: url("images/image-irene.jpg"); }
+    .customer-reviews .user .profile-3 {
+      background-image: url("images/image-anne.jpg"); }
+    .customer-reviews .user .name {
+      margin-left: 1rem; }
+      .customer-reviews .user .name p {
+        margin: 0;
+        font-weight: 500; }
+      .customer-reviews .user .name p:first-child {
+        color: white; }
+      .customer-reviews .user .name p:nth-child(2) {
+        color: #ee68a4; }
+  .customer-reviews .review-content {
+    margin-top: 2rem;
+    padding: 0 2rem; }
+  .customer-reviews .review:nth-child(2) {
+    margin-top: 1rem; }
+  .customer-reviews .review:nth-child(3) {
+    margin-top: 2rem; }
+
+/*# sourceMappingURL=style.css.map */
