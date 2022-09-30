@@ -30,6 +30,7 @@ body{
 .slogan{
     height: fit-content;
     width: 30rem;
+    padding-left: 15rem;//updated
     grid-column: lefthalf-start/righthalf-start;
     grid-row: firsthalf-start/bottomhalf-start;
     @include media-max-width(27rem){
@@ -118,9 +119,10 @@ body{
 }
 
 .customer-reviews{
-    margin-left: 5rem;
+    // margin-left: 5rem;
     align-self: start;
     justify-self: start;
+    padding-left: 13rem;
     grid-column: lefthalf-start/righthalf-end;
     grid-row: bottomhalf-start/bottomhalf-end;
     display: flex;
