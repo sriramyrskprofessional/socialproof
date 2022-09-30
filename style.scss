@@ -30,7 +30,8 @@ body{
 .slogan{
     height: fit-content;
     width: 30rem;
-    padding-left: 15rem;//updated
+    justify-self: end;
+    padding-right: 2rem;
     grid-column: lefthalf-start/righthalf-start;
     grid-row: firsthalf-start/bottomhalf-start;
     @include media-max-width(27rem){
@@ -121,8 +122,8 @@ body{
 .customer-reviews{
     // margin-left: 5rem;
     align-self: start;
-    justify-self: start;
-    padding-left: 13rem;
+    justify-self: center;
+    // padding-left: 13rem;
     grid-column: lefthalf-start/righthalf-end;
     grid-row: bottomhalf-start/bottomhalf-end;
     display: flex;
@@ -184,9 +185,13 @@ body{
             }
         }
     }
+    .review:first-child{
+        margin-left: 0;
+    }
     .review-content{
         margin-top: 2rem;
         padding: 0 2rem;
+        
     }
     .review:nth-child(2){
         margin-top: 1rem;

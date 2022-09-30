@@ -23,7 +23,8 @@ body {
 .slogan {
   height: fit-content;
   width: 30rem;
-  padding-left: 15rem;
+  justify-self: end;
+  padding-right: 2rem;
   grid-column: lefthalf-start/righthalf-start;
   grid-row: firsthalf-start/bottomhalf-start; }
   @media (max-width: 27rem) {
@@ -95,8 +96,7 @@ body {
 
 .customer-reviews {
   align-self: start;
-  justify-self: start;
-  padding-left: 13rem;
+  justify-self: center;
   grid-column: lefthalf-start/righthalf-end;
   grid-row: bottomhalf-start/bottomhalf-end;
   display: flex; }
@@ -143,6 +143,8 @@ body {
         color: white; }
       .customer-reviews .user .name p:nth-child(2) {
         color: #ee68a4; }
+  .customer-reviews .review:first-child {
+    margin-left: 0; }
   .customer-reviews .review-content {
     margin-top: 2rem;
     padding: 0 2rem; }
